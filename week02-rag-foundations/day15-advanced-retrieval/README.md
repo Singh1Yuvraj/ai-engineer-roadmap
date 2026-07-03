@@ -13,7 +13,7 @@ Build a production-style retrieval pipeline by combining:
 
 This improves both retrieval recall and ranking quality compared to a simple vector search system.
 
----
+
 
 ## Architecture
 
@@ -35,7 +35,7 @@ Cross Encoder Re-ranking
 ↓
 Top Relevant Chunks
 
----
+
 
 ## Project Structure
 
