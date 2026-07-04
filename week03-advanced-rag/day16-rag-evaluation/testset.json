@@ -1,0 +1,27 @@
+[
+  {
+    "question": "What is the notice period for termination?",
+    "ground_truth": "30 days",
+    "source": "employment.txt"
+  },
+  {
+    "question": "How long does confidentiality remain effective?",
+    "ground_truth": "3 years",
+    "source": "nda.txt"
+  },
+  {
+    "question": "How can either party terminate the agreement?",
+    "ground_truth": "written notice",
+    "source": "contract_termination.txt"
+  },
+  {
+    "question": "What is the cure period for a breach?",
+    "ground_truth": "15 days",
+    "source": "contract_termination.txt"
+  },
+  {
+    "question": "Can confidential information be shared with third parties?",
+    "ground_truth": "No, without prior written consent",
+    "source": "nda.txt"
+  }
+]

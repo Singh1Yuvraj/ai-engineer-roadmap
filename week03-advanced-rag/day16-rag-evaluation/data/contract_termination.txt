@@ -1,0 +1,21 @@
+CONTRACT TERMINATION AGREEMENT
+
+This Agreement describes the conditions under which either party may terminate the contract.
+
+1. Termination for Convenience
+Either party may terminate the Agreement at any time by providing written notice to the other party.
+
+2. Termination for Cause
+A party may terminate the Agreement immediately if the other party materially breaches any provision of this Agreement.
+
+3. Cure Period
+The breaching party shall have fifteen (15) days to cure the breach after receiving written notice.
+
+4. Effect of Termination
+Upon termination, all outstanding obligations and payments become immediately due.
+
+5. Survival
+Confidentiality, indemnification, and dispute resolution clauses shall survive termination.
+
+6. Governing Law
+This Agreement shall be governed by the laws of India.  
