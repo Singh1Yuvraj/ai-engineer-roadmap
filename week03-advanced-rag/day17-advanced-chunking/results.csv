@@ -1,0 +1,8 @@
+Collection,Recall,MRR,Latency(ms)
+fixed_200,0.33,0.33,3.45
+fixed_500,0.33,0.33,1.57
+fixed_1000,0.67,0.4,1.22
+recursive_200,0.33,0.33,2.9
+recursive_500,0.33,0.17,1.65
+recursive_1000,0.33,0.33,1.33
+legal,0.33,0.33,2.13
