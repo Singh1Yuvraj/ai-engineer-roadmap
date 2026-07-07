@@ -1,0 +1,444 @@
+# MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement (the **“Agreement”** or **“NDA”**) is executed on this **23rd day of June 2026** (the **“Effective Date”**),
+
+**BY AND BETWEEN**
+
+**(1) Asterion Cloud Systems Private Limited**, a company incorporated under the Companies Act, 2013, having Corporate Identification Number U72900MH2020PTC318451 and its registered office at 10th Floor, Meridian Tech Park, L.B.S. Marg, Kurla (West), Mumbai, Maharashtra 400070, India (hereinafter referred to as **“Asterion”**, which expression shall, unless repugnant to the context or meaning thereof, be deemed to include its successors and permitted assigns);
+
+**AND**
+
+**(2) Veridian Quantum Technologies Limited**, a public limited company incorporated under the Companies Act, 2013, having Corporate Identification Number U72200KA2018PLC110972 and its principal place of business at 7th Floor, Orion Towers, 100 Feet Road, Indiranagar, Bengaluru, Karnataka 560038, India (hereinafter referred to as **“Veridian”**, which expression shall, unless repugnant to the context or meaning thereof, include its successors and permitted assigns).
+
+Asterion and Veridian are hereinafter individually referred to as a **“Party”** and collectively as the **“Parties.”**
+
+---
+
+## 1. PARTIES AND PURPOSE
+
+1.1 The Parties wish to explore and evaluate one or more potential commercial engagements relating to enterprise-grade artificial intelligence infrastructure, managed data platforms, cybersecurity tooling, and associated technology integration services (the **“Permitted Purpose”** or **“Purpose”**).
+
+1.2 In connection with the Purpose, each Party may disclose to the other certain Confidential Information (as defined in Clause 2.3), whether in oral, visual, electronic, digital, documentary, machine-readable, or any other form.
+
+1.3 The Parties enter into this Agreement to define and regulate the terms upon which such Confidential Information shall be disclosed, received, handled, protected, and, where applicable, returned or destroyed, in accordance with Clauses 3, 5, 7, and 9.
+
+1.4 This Agreement is **mutual** in nature. Accordingly, each Party may act as either a Disclosing Party or a Receiving Party at different times, and the obligations herein shall apply correspondingly.
+
+---
+
+## 2. DEFINITIONS
+
+For the purposes of this Agreement, unless the context otherwise requires, the following terms shall have the meanings set forth below:
+
+2.1 **“Affiliate”** means, with respect to a Party, any entity that directly or indirectly controls, is controlled by, or is under common control with such Party, where “control” means ownership of more than fifty percent (50%) of the voting securities or equivalent power to direct management and policies.
+
+2.2 **“Applicable Law”** means any statute, enactment, regulation, ordinance, rule, by-law, order, judgment, notification, circular, directive, guideline, policy, governmental approval, or decree of any competent governmental, judicial, quasi-judicial, or regulatory authority having jurisdiction, including all amendments and re-enactments.
+
+2.3 **“Confidential Information”** means all non-public, proprietary, sensitive, or confidential information disclosed by or on behalf of a Disclosing Party to a Receiving Party in relation to the Purpose, including, without limitation, information specified in Clause 3.
+
+2.4 **“Disclosing Party”** means the Party that discloses Confidential Information.
+
+2.5 **“Receiving Party”** means the Party that receives Confidential Information.
+
+2.6 **“Representatives”** means, in relation to a Party, its directors, officers, employees, partners, auditors, legal advisors, consultants, contractors, temporary staff, and agents who have a strict need to know Confidential Information for the Purpose and who are bound by confidentiality obligations no less protective than those under this Agreement.
+
+2.7 **“Data Protection Laws”** means all Applicable Laws relating to privacy, data protection, cybersecurity, and handling of personal data, including, to the extent applicable, the Digital Personal Data Protection Act, 2023 and subordinate rules thereunder, and relevant regulations issued by competent Indian authorities.
+
+2.8 **“Business Day”** means any day other than a Saturday, Sunday, or a public holiday in Mumbai, Maharashtra.
+
+2.9 **“Compelled Disclosure”** means a disclosure required by Applicable Law, court order, arbitral order, or direction of a governmental or regulatory authority, subject to Clause 6.
+
+2.10 **“Security Incident”** means any actual or reasonably suspected unauthorized access, acquisition, exfiltration, use, disclosure, alteration, encryption by malicious means, corruption, or loss of Confidential Information, whether accidental or unlawful.
+
+2.11 **“Solicit”** and cognate terms include direct and indirect solicitation, inducement, enticement, recruitment, engagement, or attempted engagement, whether for employment, consultancy, advisory, or contractual services.
+
+---
+
+## 3. CONFIDENTIAL INFORMATION
+
+3.1 Without prejudice to the generality of Clause 2.3, Confidential Information shall include all information, materials, analyses, and know-how, whether provided before, on, or after the Effective Date, that are disclosed for or in relation to the Purpose.
+
+3.2 Confidential Information includes, by way of illustration and not limitation:
+
+  3.2.1 technical information, including software source code, object code, APIs, system architecture diagrams, algorithmic models, model weights, prompts, pipelines, deployment scripts, libraries, SDKs, and integration interfaces;
+
+  3.2.2 product and engineering information, including product roadmaps, release schedules, quality benchmarks, incident logs, vulnerability assessments, threat models, and penetration test findings;
+
+  3.2.3 commercial and strategic information, including business plans, market-entry strategies, pricing matrices, customer proposals, procurement plans, partnership strategies, and sales forecasts;
+
+  3.2.4 financial information, including revenue models, audited and unaudited statements, budgets, valuation assumptions, unit economics, and investor presentations;
+
+  3.2.5 legal and compliance information, including contract templates, negotiation notes, due-diligence reports, compliance audits, litigation strategy, and legal opinions;
+
+  3.2.6 customer, vendor, and partner information, including identities, contacts, purchasing patterns, renewal dates, and service-level records;
+
+  3.2.7 personally identifiable data and regulated data, where disclosed, subject to Clause 7 and Data Protection Laws;
+
+  3.2.8 the existence, terms, and status of discussions between the Parties concerning the Purpose, including drafts, term sheets, memoranda, and correspondence.
+
+3.3 Confidential Information may be disclosed in writing, orally, by demonstration, via remote access, by electronic transmission, in machine-generated logs, in visual presentations, or by any other medium; and such Confidential Information shall remain protected regardless of whether it is marked “confidential,” “proprietary,” “restricted,” or by equivalent legend.
+
+3.4 Information derived from Confidential Information, including notes, summaries, extracts, analyses, benchmark results, derivative datasets, and internal memoranda prepared by the Receiving Party or its Representatives, shall be treated as Confidential Information.
+
+3.5 Any ambiguity as to whether information is confidential shall be resolved in favor of treating such information as Confidential Information, pending written clarification by the Disclosing Party.
+
+---
+
+## 4. EXCLUSIONS FROM CONFIDENTIAL INFORMATION
+
+4.1 Notwithstanding Clause 3, Confidential Information shall not include information that the Receiving Party can demonstrate through contemporaneous written records:
+
+  4.1.1 was lawfully known to the Receiving Party without restriction prior to disclosure by the Disclosing Party;
+
+  4.1.2 is or becomes publicly available through no breach of this Agreement by the Receiving Party or its Representatives;
+
+  4.1.3 is lawfully received from an independent third party who is not under a duty of confidentiality to the Disclosing Party;
+
+  4.1.4 is independently developed by the Receiving Party without use of or reference to the Disclosing Party’s Confidential Information.
+
+4.2 The burden of proving applicability of any exclusion under Clause 4.1 shall lie solely on the Receiving Party.
+
+4.3 Combination information shall not be deemed non-confidential merely because individual elements are public, unless the combination itself, and its architecture or arrangement, is publicly known.
+
+4.4 Information shall not lose confidentiality status solely because it is retained in unaided memory of individuals, where such retention results from exposure to Confidential Information in relation to the Purpose.
+
+---
+
+## 5. OBLIGATIONS OF RECEIVING PARTY
+
+5.1 The Receiving Party shall:
+
+  5.1.1 use Confidential Information exclusively for the Purpose and for no other objective, commercial exploitation, or competitive activity;
+
+  5.1.2 hold and maintain Confidential Information in strict confidence, exercising at least the same degree of care it uses for its own confidential information of similar nature, and in no event less than reasonable care;
+
+  5.1.3 restrict access to Confidential Information strictly to Representatives on a need-to-know basis, consistent with Clause 2.6;
+
+  5.1.4 ensure its Representatives are informed of the confidential nature of such information and are bound by enforceable obligations of confidentiality and restricted use;
+
+  5.1.5 not copy, reverse engineer, disassemble, decompile, decrypt, or attempt to derive underlying structure, process flow, source logic, or trade-secret content from Confidential Information, except to the extent expressly permitted in writing by the Disclosing Party;
+
+  5.1.6 not remove, alter, suppress, or obscure proprietary notices, legends, metadata markers, copyright statements, or confidentiality labels embedded in Confidential Information;
+
+  5.1.7 promptly notify the Disclosing Party in writing upon becoming aware of any unauthorized use or disclosure, including in circumstances contemplated under Clause 7.6.
+
+5.2 The Receiving Party shall be liable for any breach of this Agreement by its Representatives as if such breach were committed by the Receiving Party itself.
+
+5.3 No license, assignment, transfer, or grant of rights (whether express, implied, by estoppel, or otherwise) is made under this Agreement except the limited right to use Confidential Information solely for the Purpose, as stated in Clause 5.1.1 and subject to Clause 8.
+
+5.4 The Receiving Party shall not use Confidential Information to circumvent the Disclosing Party, interfere with the Disclosing Party’s customer or vendor relationships, or develop substantially similar products or services by misappropriating the Disclosing Party’s proprietary know-how.
+
+5.5 Without prejudice to Clauses 10 and 18, the obligations under this Clause 5 shall commence upon first disclosure and continue for the period prescribed under Clause 10.
+
+---
+
+## 6. PERMITTED DISCLOSURES
+
+6.1 The Receiving Party may disclose Confidential Information only:
+
+  6.1.1 to its Representatives strictly in accordance with Clause 5.1.3 and Clause 5.1.4;
+
+  6.1.2 to its Affiliates solely for the Purpose, provided such Affiliates are bound by written obligations at least as protective as those in this Agreement, and the Receiving Party remains responsible for compliance;
+
+  6.1.3 where required as a Compelled Disclosure, subject to Clauses 6.2 to 6.5.
+
+6.2 In the event of a Compelled Disclosure, the Receiving Party shall, to the extent legally permissible:
+
+  6.2.1 promptly notify the Disclosing Party in writing, preferably no later than three (3) Business Days after receiving the relevant legal process;
+
+  6.2.2 provide reasonable cooperation to enable the Disclosing Party to seek a protective order, confidential treatment, or other appropriate remedy;
+
+  6.2.3 disclose only that portion of Confidential Information that is legally required to be disclosed.
+
+6.3 Where prior notice is prohibited by law, the Receiving Party shall provide notice immediately when such prohibition ceases.
+
+6.4 The Receiving Party shall use commercially reasonable efforts to ensure that any authority receiving Confidential Information pursuant to Compelled Disclosure treats such information in confidence.
+
+6.5 Disclosures under this Clause 6 do not dilute or waive confidentiality protections otherwise applicable under this Agreement.
+
+---
+
+## 7. DATA SECURITY REQUIREMENTS
+
+7.1 The Receiving Party shall implement and maintain a comprehensive written information security program with administrative, technical, and physical safeguards designed to preserve the confidentiality, integrity, and availability of Confidential Information.
+
+7.2 Such safeguards shall include, at a minimum:
+
+  7.2.1 role-based access controls, multi-factor authentication, and periodic review of access entitlements;
+
+  7.2.2 encryption of Confidential Information in transit (using current industry-accepted protocols) and at rest;
+
+  7.2.3 endpoint protection, anti-malware controls, patch management, and vulnerability remediation aligned with recognized standards;
+
+  7.2.4 secure backup, disaster recovery, and business continuity controls proportionate to risk;
+
+  7.2.5 logging, monitoring, and alerting mechanisms sufficient to detect anomalous access or exfiltration attempts;
+
+  7.2.6 confidentiality training for personnel handling Confidential Information at least annually.
+
+7.3 The Receiving Party shall process personal data, if any, in accordance with Data Protection Laws, solely for the Purpose, and shall not transfer such data across borders except where legally permitted and subject to adequate safeguards.
+
+7.4 Where the Disclosing Party reasonably requests evidence of controls, the Receiving Party shall provide high-level compliance attestations, certifications, or summaries, provided no additional confidential or security-sensitive exposure is created.
+
+7.5 The Receiving Party shall not knowingly introduce malware, ransomware, spyware, trojans, time bombs, or malicious code into systems containing the Disclosing Party’s Confidential Information.
+
+7.6 In the event of a Security Incident affecting Confidential Information, the Receiving Party shall:
+
+  7.6.1 notify the Disclosing Party without undue delay, and in any event within forty-eight (48) hours of confirmation;
+
+  7.6.2 provide available details regarding nature, scope, categories of data impacted, and mitigation measures undertaken;
+
+  7.6.3 promptly investigate, contain, and remediate the Security Incident;
+
+  7.6.4 cooperate reasonably with the Disclosing Party in legal, regulatory, forensic, and customer communications, where required.
+
+7.7 Compliance with this Clause 7 shall not relieve the Receiving Party of liability for breach of confidentiality obligations under this Agreement.
+
+---
+
+## 8. INTELLECTUAL PROPERTY OWNERSHIP
+
+8.1 All Confidential Information remains the sole and exclusive property of the Disclosing Party (or its licensors, as applicable).
+
+8.2 Nothing in this Agreement transfers, assigns, licenses, or otherwise conveys any intellectual property rights, title, or interest, save for the limited right to evaluate Confidential Information for the Purpose under Clause 5.1.1.
+
+8.3 Any inventions, improvements, derivative works, models, data schemas, or know-how created by the Receiving Party that are based on, derived from, or substantially informed by the Disclosing Party’s Confidential Information shall not be used, commercialized, or disclosed in a manner inconsistent with this Agreement.
+
+8.4 No implied license arises under patents, copyrights, trademarks, trade secrets, mask-work rights, moral rights, database rights, or other proprietary rights of either Party.
+
+8.5 Each Party reserves all rights not expressly granted under this Agreement.
+
+---
+
+## 9. RETURN OR DESTRUCTION OF INFORMATION
+
+9.1 Upon the earlier of: (a) completion or abandonment of discussions relating to the Purpose, (b) written request by the Disclosing Party, or (c) termination under Clause 17, the Receiving Party shall promptly, and in any event within fifteen (15) Business Days:
+
+  9.1.1 return to the Disclosing Party all tangible embodiments of Confidential Information; or
+
+  9.1.2 destroy Confidential Information in its possession or control, including copies, extracts, summaries, and derivative records, except as permitted under Clause 9.3.
+
+9.2 Upon request, an authorized signatory of the Receiving Party shall certify in writing, within five (5) Business Days after completion of return/destruction activities, that it has complied with Clause 9.1.
+
+9.3 Notwithstanding Clause 9.1, the Receiving Party may retain:
+
+  9.3.1 one archival copy solely for legal compliance, dispute resolution, or internal audit purposes; and/or
+
+  9.3.2 automatically generated backup copies that are not reasonably accessible in the ordinary course,
+
+provided that all retained copies remain subject to confidentiality obligations under this Agreement for the duration stated in Clause 10, and are not used for any operational, commercial, or analytical purpose beyond compliance.
+
+9.4 Where destruction is not technically feasible for specific systems, the Receiving Party shall isolate and protect such Confidential Information from further use, with equivalent safeguards under Clause 7.
+
+---
+
+## 10. CONFIDENTIALITY PERIOD
+
+10.1 This Agreement shall commence on the Effective Date and continue in force for a period of three (3) years unless terminated earlier in accordance with Clause 17 (the **“Term”**).
+
+10.2 Notwithstanding expiry or termination of the Term, the obligations of confidentiality, non-use, restricted disclosure, and data protection under Clauses 3, 5, 6, 7, 8, and 9 shall survive for a period of **five (5) years** from the date of each disclosure of Confidential Information.
+
+10.3 For illustration, where Confidential Information is disclosed on **01 September 2026**, confidentiality obligations in respect thereof shall continue until **31 August 2031**, subject to Clause 18.
+
+10.4 The Parties acknowledge that trade secret protections under Applicable Law may subsist independently, and nothing in this Clause 10 shall be construed to abridge rights available under law.
+
+---
+
+## 11. NON-SOLICITATION
+
+11.1 During the Term and for twelve (12) months thereafter, neither Party shall, without prior written consent of the other Party, Solicit for employment or engagement any key managerial personnel, senior engineering employee, or designated project lead of the other Party with whom it had direct interaction in connection with the Purpose.
+
+11.2 Clause 11.1 shall not apply where:
+
+  11.2.1 recruitment occurs through general public advertisements not specifically directed at personnel of the other Party;
+
+  11.2.2 the relevant person independently approaches the soliciting Party without prior targeted contact;
+
+  11.2.3 the individual’s employment with the other Party ended at least six (6) months prior to engagement.
+
+11.3 The Parties agree that this Clause 11 is reasonable and necessary to protect legitimate business interests and does not amount to unlawful restraint of trade under Applicable Law.
+
+---
+
+## 12. INJUNCTIVE RELIEF
+
+12.1 Each Party acknowledges that breach or threatened breach of this Agreement may cause irreparable harm to the Disclosing Party, for which monetary damages alone may be an inadequate remedy.
+
+12.2 Accordingly, in addition to any other rights and remedies available at law, in equity, or under this Agreement, the Disclosing Party shall be entitled to seek immediate injunctive, interlocutory, interim, ad-interim, or equitable relief, including specific performance, without requirement to prove actual damages or furnish security, to the extent permissible under Applicable Law.
+
+12.3 Exercise of rights under this Clause 12 shall not prejudice any claim for damages, indemnity, restitution, account of profits, or other relief.
+
+---
+
+## 13. LIMITATION OF LIABILITY
+
+13.1 Subject to Clauses 13.2 and 13.3, neither Party shall be liable to the other for indirect, incidental, special, consequential, exemplary, or punitive damages, including loss of profits, loss of business opportunity, or loss of goodwill, arising out of or in connection with this Agreement, whether in contract, tort, strict liability, or otherwise.
+
+13.2 The exclusions in Clause 13.1 shall not apply to:
+
+  13.2.1 willful misconduct, fraud, or gross negligence;
+
+  13.2.2 breach of confidentiality obligations under Clauses 3, 5, 6, 7, or 9;
+
+  13.2.3 infringement or misappropriation of intellectual property rights under Clause 8;
+
+  13.2.4 obligations arising from Compelled Disclosure non-compliance under Clause 6.
+
+13.3 Except for liabilities excluded from limitation under Clause 13.2, each Party’s aggregate liability arising out of this Agreement shall not exceed INR 5,00,00,000 (Indian Rupees Five Crore only).
+
+13.4 Nothing in this Agreement excludes or limits liability to the extent such exclusion or limitation is prohibited by Applicable Law.
+
+---
+
+## 14. GOVERNING LAW (INDIA)
+
+14.1 This Agreement, including its interpretation, validity, enforceability, performance, breach, and termination, shall be governed by and construed in accordance with the laws of India, without regard to principles of conflict of laws.
+
+14.2 Subject to Clause 15 and Clause 12, courts at Mumbai, Maharashtra, India shall have exclusive supervisory jurisdiction in relation to arbitration proceedings and interim measures.
+
+---
+
+## 15. DISPUTE RESOLUTION (ARBITRATION IN MUMBAI)
+
+15.1 Any dispute, controversy, claim, or disagreement arising out of or relating to this Agreement, including any question concerning existence, validity, interpretation, performance, breach, or termination (a **“Dispute”**), shall first be attempted to be resolved amicably through good-faith negotiations between senior representatives of the Parties.
+
+15.2 If a Dispute is not resolved within thirty (30) days from written notice of Dispute by one Party to the other, the Dispute shall be finally resolved by arbitration.
+
+15.3 Arbitration shall be conducted in accordance with the Arbitration and Conciliation Act, 1996 (as amended).
+
+15.4 The seat and venue of arbitration shall be **Mumbai, Maharashtra, India**.
+
+15.5 The arbitral tribunal shall consist of a sole arbitrator mutually appointed by the Parties; failing agreement within fifteen (15) days, the arbitrator shall be appointed in accordance with Applicable Law.
+
+15.6 The language of arbitration shall be English.
+
+15.7 The arbitral award shall be final and binding on the Parties and may be enforced by any court of competent jurisdiction.
+
+15.8 This Clause 15 does not prevent either Party from seeking urgent interim or conservatory relief under Clause 12 from courts of competent jurisdiction.
+
+---
+
+## 16. FORCE MAJEURE
+
+16.1 Neither Party shall be liable for failure or delay in performance of obligations under this Agreement (other than payment obligations, if any) to the extent such failure or delay is caused by events beyond reasonable control, including acts of God, flood, fire, epidemic, pandemic, war, armed conflict, civil unrest, terrorism, labor strikes (excluding internal strikes), governmental restrictions, or widespread telecommunications outages (each, a **“Force Majeure Event”**).
+
+16.2 The affected Party shall notify the other Party in writing within five (5) Business Days of becoming aware of the Force Majeure Event, describing nature, expected duration, and mitigation steps.
+
+16.3 The affected Party shall use commercially reasonable efforts to mitigate the effects of the Force Majeure Event and resume performance as soon as reasonably practicable.
+
+16.4 If a Force Majeure Event continues for more than sixty (60) consecutive days and materially frustrates the Purpose, either Party may terminate this Agreement upon written notice under Clause 17, without prejudice to accrued rights and surviving obligations under Clause 18.
+
+---
+
+## 17. TERMINATION
+
+17.1 Either Party may terminate this Agreement for convenience by giving thirty (30) days’ prior written notice to the other Party.
+
+17.2 Either Party may terminate this Agreement with immediate effect upon written notice if the other Party materially breaches this Agreement and fails to cure such breach within fifteen (15) Business Days of receiving written notice specifying the breach in reasonable detail.
+
+17.3 Termination or expiry of this Agreement shall not:
+
+  17.3.1 affect rights or liabilities accrued prior to the effective date of termination;
+
+  17.3.2 relieve either Party from obligations that expressly or by nature survive termination, including obligations under Clauses 5, 7, 8, 9, 10, 11 (for its stated period), 12, 13, 14, 15, 18, and 19.
+
+17.4 Upon termination, the Receiving Party shall comply with return or destruction obligations under Clause 9.
+
+---
+
+## 18. SURVIVAL OF OBLIGATIONS
+
+18.1 The Parties expressly agree that obligations which by their nature are intended to survive, or are necessary to give effect to this Agreement post-termination, shall survive expiration or termination, including but not limited to Clauses 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17.3, 18, 19, and 20.
+
+18.2 In case of inconsistency between Clause 10 and Clause 18.1, the provision affording higher protection to Confidential Information shall prevail to the extent permissible under Applicable Law.
+
+---
+
+## 19. NOTICES
+
+19.1 All notices, requests, demands, consents, waivers, and other communications under this Agreement shall be in writing and shall be deemed duly given if delivered by hand, recognized courier, registered post, or email (with delivery confirmation) to the addresses set out below, or such other address as may be notified in writing.
+
+19.2 Notice details:
+
+**For Asterion Cloud Systems Private Limited**  
+Attn: General Counsel  
+Address: 10th Floor, Meridian Tech Park, L.B.S. Marg, Kurla (West), Mumbai, Maharashtra 400070, India  
+Email: legal@asterioncloud.in  
+
+**For Veridian Quantum Technologies Limited**  
+Attn: Head – Legal & Compliance  
+Address: 7th Floor, Orion Towers, 100 Feet Road, Indiranagar, Bengaluru, Karnataka 560038, India  
+Email: legal.notices@veridianqt.com
+
+19.3 Notices shall be deemed received:
+
+  19.3.1 if delivered by hand, on the date of delivery;
+
+  19.3.2 if sent by recognized courier or registered post, on the third (3rd) Business Day after dispatch;
+
+  19.3.3 if sent by email, at 10:00 a.m. on the next Business Day following transmission, provided no delivery failure notice is received.
+
+19.4 Service of legal process relating to arbitration or interim proceedings shall additionally comply with Clause 15 and Applicable Law.
+
+---
+
+## 20. ENTIRE AGREEMENT AND MISCELLANEOUS
+
+20.1 This Agreement constitutes the entire understanding between the Parties concerning its subject matter and supersedes all prior and contemporaneous communications, representations, negotiations, term sheets, letters of intent, and understandings, whether oral or written, relating to such subject matter.
+
+20.2 No amendment, modification, or waiver of any provision of this Agreement shall be valid unless made in writing and signed by duly authorized representatives of both Parties.
+
+20.3 No failure or delay by either Party in exercising any right, power, or remedy shall operate as a waiver thereof, nor shall any single or partial exercise preclude further exercise of that or any other right.
+
+20.4 If any provision of this Agreement is determined by a court or tribunal of competent jurisdiction to be invalid, illegal, or unenforceable, the remaining provisions shall continue in full force, and the invalid provision shall be deemed modified to the minimum extent necessary to make it enforceable while preserving intent.
+
+20.5 Neither Party may assign or transfer this Agreement, in whole or in part, without prior written consent of the other Party, except to an Affiliate or in connection with merger, amalgamation, reconstruction, or sale of substantially all assets, provided the assignee assumes all obligations herein in writing.
+
+20.6 This Agreement may be executed in counterparts, each of which shall be deemed an original, and all counterparts together shall constitute one instrument. Signatures exchanged by PDF or secure electronic signature platform shall be deemed valid and binding.
+
+20.7 The relationship of the Parties is that of independent contracting parties. Nothing in this Agreement creates a partnership, agency, fiduciary relationship, joint venture, or employment relationship between the Parties.
+
+20.8 The headings in this Agreement are for convenience only and shall not affect interpretation. References to Clauses are references to clauses of this Agreement unless expressly stated otherwise.
+
+20.9 In the event of conflict between this Agreement and any subsequent project-specific non-disclosure addendum signed by both Parties, the addendum shall prevail only to the extent of explicit inconsistency and only for the specified project.
+
+20.10 Each Party acknowledges that it has read and understood this Agreement, had opportunity to seek independent legal advice, and enters into this Agreement voluntarily and with full authority.
+
+---
+
+### EXECUTION
+
+IN WITNESS WHEREOF, the Parties, acting through their duly authorized representatives, have executed this Mutual Non-Disclosure Agreement as of the Effective Date first above written.
+
+For and on behalf of  
+**Asterion Cloud Systems Private Limited**
+
+Name: **Rohan Mehta**  
+Designation: **Chief Executive Officer**  
+Date of Signature: **23 June 2026**  
+Place: **Mumbai**
+
+Signature: _________________________
+
+---
+
+For and on behalf of  
+**Veridian Quantum Technologies Limited**
+
+Name: **Ananya Rao**  
+Designation: **Chief Operating Officer**  
+Date of Signature: **24 June 2026**  
+Place: **Bengaluru**
+
+Signature: _________________________
+
+---
+
+### SCHEDULE A (Illustrative Disclosure Log Reference)
+
+- Initial technical disclosure package exchanged on **25 June 2026** under secure virtual data room.
+- Follow-up architectural workshop held on **03 July 2026**.
+- Commercial model briefing circulated on **08 July 2026**.
+- Security due diligence packet shared on **15 July 2026**.
+
+For avoidance of doubt, all disclosures listed above constitute Confidential Information pursuant to Clause 3 and remain subject to the confidentiality period set out in Clause 10.
