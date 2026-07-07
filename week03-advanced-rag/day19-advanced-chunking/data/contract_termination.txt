@@ -1,0 +1,246 @@
+CONTRACT TERMINATION AGREEMENT
+
+1. Termination
+
+Either Party may terminate this Agreement upon material breach.
+
+2. Notice
+
+Written notice must be provided before termination becomes effective.
+
+3. Effect of Termination
+
+Upon termination, all obligations cease except those expressly stated to survive termination.
+
+4. Surviving Clauses
+
+Confidentiality and indemnification obligations survive termination.
+
+5. Governing Law
+
+# MASTER SERVICES AGREEMENT
+
+This Master Services Agreement (the **“Agreement”**) is made and entered into on **23 June 2026** (the **“Effective Date”**)
+
+**BY AND BETWEEN**
+
+**PrismForge Technologies Private Limited**, a company incorporated under the Companies Act, 2013, with registered office at 12th Floor, One BKC Tower, Bandra Kurla Complex, Mumbai, Maharashtra 400051, India (**“Vendor”**);
+
+and
+
+**Nexora Enterprises Limited**, a company incorporated under the Companies Act, 2013, with corporate office at 8th Floor, Meridian Business Park, Outer Ring Road, Bengaluru, Karnataka 560103, India (**“Customer”**).
+
+Vendor and Customer are each a **“Party”** and together the **“Parties.”**
+
+## 1. Parties
+1.1 This Agreement governs Customer’s purchase and Vendor’s provision of AI-enabled software services and related professional services as described herein and in each Statement of Work.  
+1.2 Affiliates may procure Services under this Agreement by executing separate SOWs referencing this Agreement.
+
+## 2. Definitions
+2.1 **“Services”** means the SaaS platform, API access, support, and professional services provided by Vendor.  
+2.2 **“Platform”** means Vendor’s hosted AI contract intelligence and workflow automation product branded “PrismForge LegalAI Cloud.”  
+2.3 **“SOW”** means a Statement of Work signed by both Parties.  
+2.4 **“Deliverables”** means tangible work product identified in an SOW.  
+2.5 **“Service Levels”** means uptime and support commitments in Section 5.  
+2.6 **“Customer Data”** means all data submitted by or on behalf of Customer to the Services.  
+2.7 **“ACV”** means annual contract value payable by Customer for subscription Services.  
+2.8 **“Business Day”** means a day other than Saturday, Sunday, or public holiday in Mumbai, India.
+
+## 3. Scope of Services
+3.1 Vendor shall provide:  
+(a) subscription-based access to the Platform on a SaaS basis;  
+(b) API access for integration with Customer systems, subject to rate limits and technical documentation;  
+(c) implementation, onboarding, configuration, and training services as set out in applicable SOWs;  
+(d) maintenance, support, and updates.  
+3.2 Customer receives a non-exclusive, non-transferable, non-sublicensable right during the Term to use the Services for internal business purposes.
+
+## 4. Statements of Work
+4.1 Specific services, timelines, milestones, assumptions, dependencies, and fees shall be defined in one or more SOWs.  
+4.2 In case of conflict, order of precedence shall be: (i) signed SOW; (ii) this Agreement; (iii) exhibits/policies referenced herein.  
+4.3 No SOW is binding unless executed by authorized signatories of both Parties.
+
+## 5. Service Levels
+5.1 Vendor commits to **99.9% monthly uptime** for production SaaS Services, excluding Scheduled Maintenance (not exceeding 6 hours/month) and Excluded Downtime.  
+5.2 If monthly uptime falls below 99.9%, Customer shall be entitled to service credits as follows:  
+(a) 99.0% to <99.9%: 5% of monthly subscription fee;  
+(b) 98.0% to <99.0%: 10%;  
+(c) <98.0%: 15%.  
+5.3 Total credits in any month are capped at 15% of monthly subscription fees and are Customer’s sole remedy for SLA breach, without prejudice to termination rights under Section 26 for chronic failure.  
+5.4 Severity 1 incidents (production outage/security-critical) shall have 30-minute response and continuous remediation efforts.
+
+## 6. Deliverables
+6.1 Vendor shall deliver Deliverables in accordance with the applicable SOW and industry standards.  
+6.2 Unless expressly stated, Deliverables are deemed accepted upon completion of Acceptance Criteria under Section 12.
+
+## 7. Customer Responsibilities
+7.1 Customer shall:  
+(a) provide timely access to personnel, systems, and information reasonably required;  
+(b) ensure legality, accuracy, and rights to use Customer Data;  
+(c) maintain secure credentials and notify Vendor of unauthorized use;  
+(d) appoint a project manager for governance and approvals.  
+7.2 Delays caused by Customer dependencies may result in equitable timeline adjustments.
+
+## 8. Vendor Responsibilities
+8.1 Vendor shall perform Services in a professional and workmanlike manner using qualified personnel.  
+8.2 Vendor shall maintain helpdesk support, monitoring, incident management, and change management practices.  
+8.3 Vendor shall not materially degrade core functionality during the Subscription Term.
+
+## 9. Fees and Payment Terms
+9.1 Customer shall pay fees set out in each SOW/order form.  
+9.2 Initial commercial terms: ACV of **INR 2,40,00,000** for 12-month subscription, billed quarterly in advance; one-time implementation fee of **INR 30,00,000**.  
+9.3 Payment is due within **30 days** from undisputed invoice date.  
+9.4 Late undisputed payments may incur interest at 1.5% per month or maximum lawful rate, whichever is lower.  
+9.5 Fees are non-cancelable and non-refundable except as expressly provided.
+
+## 10. Taxes
+10.1 Fees exclude GST and other applicable indirect taxes, which shall be charged additionally.  
+10.2 Each Party is responsible for taxes imposed on its income, payroll, and corporate existence.  
+10.3 If withholding tax applies, Customer may deduct and remit as legally required and shall provide valid withholding certificates.
+
+## 11. Change Requests
+11.1 Either Party may propose changes to scope, timelines, deliverables, or assumptions via written Change Request.  
+11.2 Vendor shall provide impact assessment on fees, schedule, and resources.  
+11.3 Changes become effective only upon signed Change Order.
+
+## 12. Acceptance Criteria
+12.1 Each SOW shall specify objective Acceptance Criteria and testing procedure.  
+12.2 Customer shall conduct acceptance testing within 10 Business Days of delivery.  
+12.3 If Deliverables materially fail Acceptance Criteria, Customer shall provide written rejection reasons; Vendor shall remediate and resubmit.  
+12.4 Deliverables shall be deemed accepted if Customer uses them in production or fails to respond within acceptance window.
+
+## 13. Warranties
+13.1 Vendor warrants that during the Term:  
+(a) Services will materially conform to documentation;  
+(b) Services will be performed with reasonable skill and care;  
+(c) Vendor has authority to grant rights under this Agreement.  
+13.2 Customer warrants it has rights to provide Customer Data and that such use does not violate Applicable Law.  
+13.3 Except as expressly stated, Services are provided “as is,” and all implied warranties are disclaimed to the maximum extent permitted by law.
+
+## 14. Intellectual Property
+14.1 Vendor retains all rights in the Platform, software, models, APIs, documentation, and pre-existing materials.  
+14.2 Customer retains all rights in Customer Data and Customer trademarks.  
+14.3 Subject to this Agreement, Vendor may use aggregated and de-identified telemetry for service improvement, provided no Customer-identifiable data is disclosed.  
+14.4 Custom Deliverables specifically paid for under an SOW shall be licensed to Customer on a perpetual, non-exclusive basis unless otherwise stated.
+
+## 15. Confidentiality
+15.1 Each Party shall protect the other Party’s Confidential Information using at least reasonable care and not less than the care used for its own similar information.  
+15.2 Confidential Information shall be used solely to perform or receive Services.  
+15.3 Confidentiality obligations shall not apply to information that is public, independently developed, rightfully received from third party, or required by law to be disclosed (with prior notice where lawful).  
+15.4 Obligations survive for 5 years from disclosure.
+
+## 16. Data Processing
+16.1 Vendor shall process Customer Data solely on documented instructions from Customer and only for providing Services.  
+16.2 Vendor shall store primary production Customer Data in data centers located in **India** and shall not transfer identifiable Customer Data outside India without prior written consent.  
+16.3 Parties shall execute a Data Processing Addendum where required by Applicable Law.
+
+## 17. Security Requirements
+17.1 Vendor shall maintain an information security program aligned to ISO 27001 or equivalent controls, including:  
+(a) encryption in transit (TLS 1.2+) and at rest (AES-256 or equivalent);  
+(b) role-based access control and MFA for privileged users;  
+(c) vulnerability management and annual penetration testing;  
+(d) logging, monitoring, and secure backup.  
+17.2 Vendor shall maintain least-privilege access and periodic access recertification.
+
+## 18. Cybersecurity Incident Response
+18.1 Vendor shall notify Customer of a confirmed cybersecurity incident affecting Customer Data without undue delay, and in any event within **24 hours** of confirmation.  
+18.2 Vendor shall provide incident details, containment actions, remediation plan, and periodic updates.  
+18.3 Vendor shall cooperate with Customer’s reasonable forensic, regulatory, and contractual response obligations.
+
+## 19. Compliance Requirements
+19.1 Each Party shall comply with Applicable Law, including anti-bribery, sanctions, export controls, labor, tax, and data protection laws.  
+19.2 Vendor shall maintain policies and training reasonably designed to ensure ongoing compliance.  
+19.3 Customer shall not use Services for unlawful, infringing, or prohibited content generation activities.
+
+## 20. Audit Rights
+20.1 Customer may, no more than once annually, audit Vendor’s compliance with Sections 16–19 upon 30 days’ notice, during business hours, and subject to confidentiality safeguards.  
+20.2 In lieu of on-site audit, Vendor may provide recent independent audit reports/certifications (e.g., ISO/SOC) where sufficient.  
+20.3 Customer bears audit costs unless material non-compliance is identified, in which case Vendor shall bear reasonable remediation verification costs.
+
+## 21. Indemnification
+21.1 Vendor shall defend and indemnify Customer against third-party claims alleging Services infringe intellectual property rights, and pay resulting damages/costs finally awarded or settled with Vendor consent.  
+21.2 Vendor may, at its option, procure rights, modify Services, or replace infringing components; if not commercially reasonable, Vendor may terminate affected Services and refund prepaid unused fees for terminated portion.  
+21.3 Customer shall defend and indemnify Vendor against third-party claims arising from Customer Data or Customer’s unlawful use of Services.  
+21.4 Indemnified Party shall promptly notify, provide cooperation, and allow control of defense to indemnifying Party.
+
+## 22. Limitation of Liability
+22.1 Except for Excluded Claims, each Party’s aggregate liability under this Agreement shall not exceed **100% of fees paid or payable in the 12 months preceding the event giving rise to liability**.  
+22.2 Neither Party is liable for indirect, consequential, special, exemplary, or punitive damages, including lost profits or goodwill.  
+22.3 **Excluded Claims**: breach of confidentiality, data protection obligations, indemnification liabilities, fraud, willful misconduct, and unpaid fees.
+
+## 23. Insurance
+23.1 Vendor shall maintain during the Term:  
+(a) Professional Indemnity / Errors & Omissions: INR 10,00,00,000 per claim;  
+(b) Cyber Liability: INR 15,00,00,000 per claim;  
+(c) Commercial General Liability: INR 5,00,00,000 per claim;  
+(d) Workers’ compensation as required by law.  
+23.2 Certificates of insurance shall be furnished upon request.
+
+## 24. Force Majeure
+24.1 Neither Party is liable for delay/failure caused by events beyond reasonable control, excluding payment obligations.  
+24.2 Affected Party shall notify promptly and mitigate impacts.  
+24.3 If force majeure continues beyond 60 days, either Party may terminate affected Services on written notice.
+
+## 25. Suspension of Services
+25.1 Vendor may suspend Services, upon prior notice where practicable, for:  
+(a) material security risk;  
+(b) Customer’s unlawful use;  
+(c) non-payment exceeding 30 days after written reminder;  
+(d) emergency maintenance.  
+25.2 Vendor shall restore Services promptly once grounds for suspension are cured.
+
+## 26. Termination for Cause
+26.1 Either Party may terminate this Agreement or an SOW for material breach not cured within 30 days after written notice.  
+26.2 Customer may terminate for cause if Vendor fails Service Levels for 3 consecutive months or 4 months in any rolling 12-month period.  
+26.3 Upon termination for Vendor breach, Customer is entitled to refund of prepaid unused subscription fees for terminated period.
+
+## 27. Termination for Convenience
+27.1 Customer may terminate an SOW for convenience after initial 12-month committed period, with 90 days’ written notice.  
+27.2 Vendor may terminate for convenience only if all affected Services are sunset across similarly situated customers, with at least 180 days’ notice and transition support under Section 28.
+
+## 28. Transition Assistance
+28.1 For up to 6 months post-termination, Vendor shall provide reasonable transition assistance at then-current professional services rates.  
+28.2 Vendor shall enable export of Customer Data in commonly used machine-readable format and certify deletion of residual production data, subject to legal retention obligations.
+
+## 29. Governing Law (India)
+29.1 This Agreement is governed by and construed in accordance with the laws of India.
+
+## 30. Arbitration (Mumbai)
+30.1 Disputes not resolved amicably within 30 days shall be finally resolved by arbitration under the Arbitration and Conciliation Act, 1996 (as amended).  
+30.2 Seat and venue: **Mumbai, Maharashtra, India**.  
+30.3 Tribunal: sole arbitrator jointly appointed; failing agreement, appointed per law.  
+30.4 Language: English.  
+30.5 Nothing prevents either Party from seeking interim injunctive relief from courts in Mumbai.
+
+## 31. Survival
+31.1 Sections 9 (accrued payment obligations), 14, 15, 16, 18, 21, 22, 28, 29, 30, 31, and 32 survive expiry or termination.
+
+## 32. Notices
+32.1 Notices shall be in writing and sent by courier or email with delivery confirmation to:  
+
+For Vendor:  
+Legal Department, PrismForge Technologies Private Limited  
+12th Floor, One BKC Tower, Bandra Kurla Complex, Mumbai 400051  
+Email: legal@prismforge.ai  
+
+For Customer:  
+General Counsel, Nexora Enterprises Limited  
+8th Floor, Meridian Business Park, Outer Ring Road, Bengaluru 560103  
+Email: legal.notices@nexora.in  
+
+32.2 Notices are deemed received on delivery date (courier) or next Business Day after email transmission, unless bounce-back is received.
+
+---
+
+IN WITNESS WHEREOF, the Parties have caused this Agreement to be executed by their duly authorized representatives on the Effective Date.
+
+For PrismForge Technologies Private Limited  
+Name: __________________  
+Title: ___________________  
+Signature: _______________  
+Date: ___________________
+
+For Nexora Enterprises Limited  
+Name: __________________  
+Title: ___________________  
+Signature: _______________  
+Date: ___________________
