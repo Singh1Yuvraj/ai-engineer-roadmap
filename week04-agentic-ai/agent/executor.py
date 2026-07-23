@@ -1,41 +1,57 @@
-"""
-agent/executor.py
-Execution engine that runs plans through registered tools.
-"""
-
-from typing import List, Dict, Any
-# pyrefly: ignore [missing-import]
-from agent.registry import ToolRegistry
-# pyrefly: ignore [missing-import]
-from agent.memory import AgentMemory
+import inspect
+from typing import Any, Dict, List
 
 
 class PlanExecutor:
-    def __init__(self, registry: ToolRegistry, memory: AgentMemory):
-        self.registry = registry
-        self.memory = memory
 
-    def execute_plan(self, plan: List[Dict[str, Any]]) -> Any:
-        """Executes a series of planned steps sequentially."""
-        last_output = None
+    def __init__(self, tool_registry: Dict[str, Any]):
+        self.registry = tool_registry
+
+    def execute(self, plan: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        observations = []
 
         for step in plan:
-            tool_name = step["tool"]
-            tool_input = step["input"]
+            tool_name = step.get("tool")
+            tool_input = step.get("input", {})
 
-            # If input specifies using prior results, chain the last output
-            if tool_input == "use_search_results" and last_output is not None:
-                tool_input = last_output
-
-            tool = self.registry.get_tool(tool_name)
-            output = tool.run(tool_input)
-
-            # Record step observation into memory
-            self.memory.add_observation(
-                tool_name=tool_name,
-                tool_input=tool_input,
-                output=output
+            print(
+                f"  ⚙️ [Executor] Executing tool '{tool_name}' with args: {tool_input}"
             )
-            last_output = output
 
-        return last_output
+            if tool_name not in self.registry:
+                obs = f"Error: Tool '{tool_name}' is not registered."
+                observations.append({"tool": tool_name, "observation": obs})
+                continue
+
+            tool = self.registry[tool_name]
+
+            try:
+                # Handle Tool classes vs functions dynamically
+                tool_callable = getattr(tool, "run", tool)
+
+                if isinstance(tool_input, dict):
+                    # Inspect tool target to safely map arguments
+                    sig = inspect.signature(tool_callable)
+                    params = sig.parameters
+
+                    # If tool expects 1 positional arg (e.g. string query) but input is dict
+                    if len(params) == 1 and not any(
+                        p.kind == inspect.Parameter.VAR_KEYWORD
+                        for p in params.values()
+                    ):
+                        single_val = next(iter(tool_input.values()))
+                        observation = tool_callable(single_val)
+                    else:
+                        observation = tool_callable(**tool_input)
+                else:
+                    observation = tool_callable(tool_input)
+
+            except Exception as e:
+                observation = f"Execution Error: {str(e)}"
+
+            print(f"  👁️ [Observation]: {observation}")
+            observations.append(
+                {"tool": tool_name, "observation": observation}
+            )
+
+        return observations
