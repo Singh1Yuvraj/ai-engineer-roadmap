@@ -1,48 +1,38 @@
-"""
-agent/agent.py
-Master LegalAgent orchestrator coordinating planning, tool execution, and memory.
-"""
-
-from typing import Dict, Any
-# pyrefly: ignore [missing-import]
-from agent.memory import AgentMemory
-# pyrefly: ignore [missing-import]
-from agent.planner import RuleBasedPlanner
-# pyrefly: ignore [missing-import]
-from agent.registry import ToolRegistry
+from typing import Any, Dict
 # pyrefly: ignore [missing-import]
 from agent.executor import PlanExecutor
+# pyrefly: ignore [missing-import]
+from agent.planner import LLMPlanner
 
 
-class LegalAgent:
-    def __init__(self):
-        self.memory = AgentMemory()
-        self.planner = RuleBasedPlanner()
-        self.registry = ToolRegistry()
-        self.executor = PlanExecutor(self.registry, self.memory)
+class LLMPlanningAgent:
 
-    def run(self, query: str) -> Dict[str, Any]:
-        """Runs the query through Planning -> Execution -> Observation -> Final Answer."""
-        self.memory.clear()
-        self.memory.add_user_message(query)
+    def __init__(self, llm_client, tool_registry: Dict[str, Any]):
+        self.llm = llm_client
+        self.planner = LLMPlanner(llm_client)
+        self.executor = PlanExecutor(tool_registry)
 
-        # 1. Generate Execution Plan
-        plan = self.planner.create_plan(query)
+    def run(self, user_query: str) -> str:
+        print(f"\n{'='*70}\n👤 User Query: {user_query}\n{'='*70}")
 
-        # 2. Execute Plan & Record Observations
-        execution_result = self.executor.execute_plan(plan)
+        # Step 1: LLM Planning Phase
+        print("🧠 [1. LLM Planner] Requesting execution plan...")
+        plan = self.planner.create_plan(user_query)
+        print(f"📋 [2. Parsed JSON Plan]: {plan}")
 
-        # 3. Format Final Answer
-        if isinstance(execution_result, list) and execution_result:
-            final_answer = execution_result[0].get("document", str(execution_result))
-        else:
-            final_answer = str(execution_result)
+        # Step 2: Deterministic Execution Phase (Zero LLM involvement here)
+        print("⚡ [3. Executor] Running plan against tool registry...")
+        observations = self.executor.execute(plan)
 
-        self.memory.add_final_answer(final_answer)
+        # Step 3: Synthesis Phase (LLM summarizes observations into final user answer)
+        print("💬 [4. Final Answer LLM] Synthesizing response from observations...")
+        synthesis_prompt = f"""
+You are a Legal AI assistant. Answer the user's question accurately using ONLY the tool observations provided below.
 
-        return {
-            "query": query,
-            "plan": plan,
-            "final_answer": final_answer,
-            "history": self.memory.get_history()
-        }
+User Query: {user_query}
+Tool Observations: {observations}
+
+Final Answer:
+"""
+        final_answer = self.llm.invoke(synthesis_prompt)
+        return final_answer

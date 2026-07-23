@@ -1,58 +1,44 @@
-"""
-agent/planner.py
-Rule-based planning engine for task decomposition and tool selection.
-"""
-
-from typing import List, Dict, Any
+import json
+import re
+from typing import Any, Dict, List
 
 
-class RuleBasedPlanner:
-    def __init__(self):
-        pass
+class LLMPlanner:
 
-    def create_plan(self, query: str) -> List[Dict[str, Any]]:
-        """
-        Analyzes query intent via keyword heuristics and generates a multi-step execution plan.
-        """
-        q_lower = query.lower()
-        plan = []
+    def __init__(self, llm_client, prompt_path: str = "prompts/planner_prompt.txt"):
+        self.llm = llm_client
+        with open(prompt_path, "r", encoding="utf-8") as f:
+            self.system_prompt = f.read()
 
-        # Intent: Contract Comparison
-        if "compare" in q_lower or "versus" in q_lower or "vs" in q_lower:
-            plan.append({
-                "step": 1,
-                "tool": "compare",
-                "input": {"doc_a": "nda.txt", "doc_b": "employment.txt"}
-            })
+    def create_plan(self, user_query: str) -> List[Dict[str, Any]]:
+        full_prompt = f"{self.system_prompt}\n\nUser Query: {user_query}\nPlan:"
 
-        # Intent: Clause Extraction
-        elif "extract" in q_lower or "clause" in q_lower:
-            clause_type = "termination" if "termination" in q_lower else "confidentiality"
-            plan.append({
-                "step": 1,
-                "tool": "extract_clause",
-                "input": clause_type
-            })
+        # LLM Call strictly for planning
+        raw_response = self.llm.invoke(full_prompt)
 
-        # Intent: Summarization
-        elif "summarize" in q_lower or "summary" in q_lower:
-            plan.append({
-                "step": 1,
-                "tool": "search",
-                "input": query
-            })
-            plan.append({
-                "step": 2,
-                "tool": "summarize",
-                "input": "use_search_results"
-            })
+        return self._parse_json_plan(raw_response)
 
-        # Default Fallback: Vector / Hybrid Search
-        else:
-            plan.append({
-                "step": 1,
-                "tool": "search",
-                "input": query
-            })
+    def _parse_json_plan(self, raw_response: str) -> List[Dict[str, Any]]:
+        cleaned = raw_response.strip()
 
-        return plan
+        # Strip markdown fences if the LLM ignores instructions
+        cleaned = re.sub(r"^```(?:json)?\s*", "", cleaned, flags=re.MULTILINE)
+        cleaned = re.sub(r"\s*```$", "", cleaned, flags=re.MULTILINE).strip()
+
+        try:
+            plan = json.loads(cleaned)
+            if isinstance(plan, list):
+                return plan
+            elif isinstance(plan, dict):
+                return [plan]
+            else:
+                raise ValueError("Parsed JSON is not a list or dict.")
+        except json.JSONDecodeError as e:
+            print(f"⚠️ [Planner Error] Could not parse JSON plan: {e}")
+            # Fallback tool call if plan generation failed
+            return [
+                {
+                    "tool": "search",
+                    "input": {"query": cleaned[:100]},
+                }
+            ]
