@@ -1,36 +1,26 @@
-"""
-agent/memory.py
-Execution history and conversation memory store for the Legal AI Agent.
-"""
-
-from typing import List, Dict, Any
+from typing import Any, Dict, List
 
 
-class AgentMemory:
-    def __init__(self):
-        self.history: List[Dict[str, Any]] = []
+class ConversationMemory:
 
-    def add_user_message(self, message: str):
-        """Logs incoming user queries."""
-        self.history.append({"role": "user", "content": message})
+    def __init__(self, max_turns: int = 10):
+        self.history: List[Dict[str, str]] = []
+        self.max_turns: int = max_turns
 
-    def add_observation(self, tool_name: str, tool_input: Any, output: Any):
-        """Logs tool execution inputs and observations."""
-        self.history.append({
-            "role": "observation",
-            "tool": tool_name,
-            "input": tool_input,
-            "output": output
-        })
+    def add_turn(self, user_query: str, final_response: str) -> None:
+        self.history.append({"role": "user", "content": user_query})
+        self.history.append({"role": "assistant", "content": final_response})
+        # Trim older turns if history exceeds max capacity
+        if len(self.history) > self.max_turns * 2:
+            self.history = self.history[-(self.max_turns * 2) :]
 
-    def add_final_answer(self, answer: str):
-        """Logs final response payload."""
-        self.history.append({"role": "assistant", "content": answer})
+    def get_context_string(self) -> str:
+        if not self.history:
+            return "No previous conversation history."
+        formatted = []
+        for msg in self.history:
+            formatted.append(f"{msg['role'].capitalize()}: {msg['content']}")
+        return "\n".join(formatted)
 
-    def get_history(self) -> List[Dict[str, Any]]:
-        """Returns the full execution trace."""
-        return self.history
-
-    def clear(self):
-        """Clears memory state for new runs."""
-        self.history = []
+    def clear(self) -> None:
+        self.history.clear()
