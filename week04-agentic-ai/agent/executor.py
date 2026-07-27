@@ -1,57 +1,67 @@
-import inspect
 from typing import Any, Dict, List
+# pyrefly: ignore [missing-import]
+from agent.registry import ToolRegistry
+# pyrefly: ignore [missing-import]
+from agent.state import AgentState
 
 
 class PlanExecutor:
 
-    def __init__(self, tool_registry: Dict[str, Any]):
-        self.registry = tool_registry
+    def __init__(self, registry: ToolRegistry):
+        self.registry = registry
 
-    def execute(self, plan: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        observations = []
+    def execute(
+        self, tool_calls: List[Dict[str, Any]], state: AgentState
+    ) -> AgentState:
+        for call in tool_calls:
+            tool_name = call.get("tool")
+            raw_args = call.get("arguments", {})
 
-        for step in plan:
-            tool_name = step.get("tool")
-            tool_input = step.get("input", {})
+            # 1. Resolve arguments using central AgentState (e.g. $last -> actual text)
+            resolved_args = state.resolve_arguments(raw_args)
 
-            print(
-                f"  ⚙️ [Executor] Executing tool '{tool_name}' with args: {tool_input}"
+            print(f"\n  ⚙️ [Executor] Target Tool: '{tool_name}'")
+            print(f"     Raw Args:      {raw_args}")
+            print(f"     Resolved Args: {resolved_args}")
+
+            # 2. Schema Validation
+            validation_errors = self.registry.validate_call(
+                tool_name, resolved_args
             )
-
-            if tool_name not in self.registry:
-                obs = f"Error: Tool '{tool_name}' is not registered."
-                observations.append({"tool": tool_name, "observation": obs})
+            if validation_errors:
+                err_msg = "; ".join(validation_errors)
+                print(f"  ❌ Validation Error: {err_msg}")
+                state.record_step(
+                    tool_name=tool_name,
+                    arguments=resolved_args,
+                    output=None,
+                    status="failed",
+                    error=err_msg,
+                )
                 continue
 
-            tool = self.registry[tool_name]
-
+            # 3. Execution & State Recording
+            tool = self.registry.get_tool(tool_name)
             try:
-                # Handle Tool classes vs functions dynamically
                 tool_callable = getattr(tool, "run", tool)
+                observation = tool_callable(**resolved_args)
+                print(f"  👁️ [Observation]: {observation}")
 
-                if isinstance(tool_input, dict):
-                    # Inspect tool target to safely map arguments
-                    sig = inspect.signature(tool_callable)
-                    params = sig.parameters
-
-                    # If tool expects 1 positional arg (e.g. string query) but input is dict
-                    if len(params) == 1 and not any(
-                        p.kind == inspect.Parameter.VAR_KEYWORD
-                        for p in params.values()
-                    ):
-                        single_val = next(iter(tool_input.values()))
-                        observation = tool_callable(single_val)
-                    else:
-                        observation = tool_callable(**tool_input)
-                else:
-                    observation = tool_callable(tool_input)
-
+                state.record_step(
+                    tool_name=tool_name,
+                    arguments=resolved_args,
+                    output=observation,
+                    status="completed",
+                )
             except Exception as e:
-                observation = f"Execution Error: {str(e)}"
+                err_msg = f"Execution Exception: {str(e)}"
+                print(f"  ❌ Execution Error: {err_msg}")
+                state.record_step(
+                    tool_name=tool_name,
+                    arguments=resolved_args,
+                    output=None,
+                    status="failed",
+                    error=err_msg,
+                )
 
-            print(f"  👁️ [Observation]: {observation}")
-            observations.append(
-                {"tool": tool_name, "observation": observation}
-            )
-
-        return observations
+        return state

@@ -1,44 +1,48 @@
 import json
 import re
 from typing import Any, Dict, List
+# pyrefly: ignore [missing-import]
+from agent.registry import ToolRegistry
 
 
-class LLMPlanner:
+class FunctionPlanner:
 
-    def __init__(self, llm_client, prompt_path: str = "prompts/planner_prompt.txt"):
+    def __init__(self, llm_client, registry: ToolRegistry):
         self.llm = llm_client
-        with open(prompt_path, "r", encoding="utf-8") as f:
-            self.system_prompt = f.read()
+        self.registry = registry
 
     def create_plan(self, user_query: str) -> List[Dict[str, Any]]:
-        full_prompt = f"{self.system_prompt}\n\nUser Query: {user_query}\nPlan:"
+        schemas = self.registry.get_schemas()
 
-        # LLM Call strictly for planning
-        raw_response = self.llm.invoke(full_prompt)
+        prompt = f"""You are an AI Function Calling Agent.
+Available Tool Schemas:
+{json.dumps(schemas, indent=2)}
 
-        return self._parse_json_plan(raw_response)
+State Variable Rule:
+If a step depends on the output of a previous step, set that argument to "$last" or "$<tool_name>.output".
 
-    def _parse_json_plan(self, raw_response: str) -> List[Dict[str, Any]]:
+User Query: {user_query}
+
+Return a valid JSON array of tool execution objects matching this structure:
+[
+  {{
+    "tool": "<tool_name>",
+    "arguments": {{ ... }}
+  }}
+]
+
+Return ONLY valid JSON."""
+
+        raw_response = self.llm.invoke(prompt)
+        return self._parse_tool_calls(raw_response)
+
+    def _parse_tool_calls(self, raw_response: str) -> List[Dict[str, Any]]:
         cleaned = raw_response.strip()
-
-        # Strip markdown fences if the LLM ignores instructions
         cleaned = re.sub(r"^```(?:json)?\s*", "", cleaned, flags=re.MULTILINE)
         cleaned = re.sub(r"\s*```$", "", cleaned, flags=re.MULTILINE).strip()
 
         try:
             plan = json.loads(cleaned)
-            if isinstance(plan, list):
-                return plan
-            elif isinstance(plan, dict):
-                return [plan]
-            else:
-                raise ValueError("Parsed JSON is not a list or dict.")
-        except json.JSONDecodeError as e:
-            print(f"⚠️ [Planner Error] Could not parse JSON plan: {e}")
-            # Fallback tool call if plan generation failed
-            return [
-                {
-                    "tool": "search",
-                    "input": {"query": cleaned[:100]},
-                }
-            ]
+            return plan if isinstance(plan, list) else [plan]
+        except json.JSONDecodeError:
+            return [{"tool": "search", "arguments": {"query": cleaned[:100]}}]
