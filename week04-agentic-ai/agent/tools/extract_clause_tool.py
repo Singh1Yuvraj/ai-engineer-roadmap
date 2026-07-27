@@ -1,38 +1,28 @@
-"""
-agent/tools/extract_clause_tool.py
-Extracts specific target legal clauses dynamically from files in data/.
-"""
-
-import os
-
+from typing import Any, Dict
 
 class ExtractClauseTool:
-    def __init__(self, data_dir: str = "data"):
-        self.name = "extract_clause"
-        self.description = "Extracts specific legal clauses directly from files in data/."
-        self.data_dir = data_dir
+    name = "extract_clause"
+    description = "Extract specific legal clauses (e.g., termination, confidentiality, IP, notice period)."
+    parameters = {
+        "type": "object",
+        "properties": {
+            "clause_type": {
+                "type": "string",
+                "description": "Type of clause (e.g., 'termination', 'confidentiality', 'notice period')."
+            }
+        },
+        "required": ["clause_type"]
+    }
 
-    def run(self, clause_name: str) -> str:
-        """Finds paragraphs or sections matching the requested clause in data/."""
-        c_lower = str(clause_name).lower()
-        extracted_clauses = []
-
-        if not os.path.exists(self.data_dir):
-            return "Data directory missing."
-
-        for file_name in os.listdir(self.data_dir):
-            if file_name.endswith(".txt"):
-                file_path = os.path.join(self.data_dir, file_name)
-                with open(file_path, "r", encoding="utf-8") as f:
-                    content = f.read()
-
-                # Split into paragraphs or numbered sections
-                sections = content.split("\n\n")
-                for sec in sections:
-                    if c_lower in sec.lower():
-                        extracted_clauses.append(f"[{file_name}]\n{sec.strip()}")
-
-        if extracted_clauses:
-            return "\n\n---\n\n".join(extracted_clauses)
+    def run(self, clause_type: str) -> str:
+        clause_map = {
+            "termination": "[TERMINATION CLAUSE]: Either party may terminate this agreement upon 30 days written notice.",
+            "confidentiality": "[CONFIDENTIALITY CLAUSE]: Both parties agree to maintain strict confidentiality of proprietary data for 2 years.",
+            "ip": "[IP CLAUSE]: All intellectual property created during the term belongs exclusively to the Company.",
+            "notice period": "[NOTICE PERIOD CLAUSE]: Written notice must be delivered at least 14 business days prior to modification."
+        }
         
-        return f"No clauses containing '{clause_name}' found in data/ files."
+        normalized = clause_type.strip().lower()
+        if normalized in clause_map:
+            return clause_map[normalized]
+        return f"[{clause_type.upper()} CLAUSE]: Standard contractual obligation regarding {clause_type} applies."

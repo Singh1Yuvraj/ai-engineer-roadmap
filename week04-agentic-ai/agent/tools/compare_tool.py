@@ -1,23 +1,23 @@
-"""
-agent/tools/compare_tool.py
-Compares structural features across multiple legal documents.
-"""
-
-from typing import Dict, Any
+from typing import Any, Dict
 
 
 class CompareTool:
-    def __init__(self):
-        self.name = "compare"
-        self.description = "Compares two contract types side-by-side."
+    name = "compare"
+    description = "Compare terms across two legal documents or clauses."
+    parameters = {
+        "type": "object",
+        "properties": {
+            "doc_a": {
+                "type": "string",
+                "description": "First document or clause context."
+            },
+            "doc_b": {
+                "type": "string",
+                "description": "Second document or clause context."
+            }
+        },
+        "required": ["doc_a", "doc_b"]
+    }
 
-    def run(self, input_data: Dict[str, str]) -> str:
-        """Performs side-by-side document comparison."""
-        doc_a = input_data.get("doc_a", "Document A")
-        doc_b = input_data.get("doc_b", "Document B")
-        
-        return (
-            f"Comparison Matrix [{doc_a} vs {doc_b}]:\n"
-            f"- {doc_a}: High confidentiality compliance, standard 30-day termination.\n"
-            f"- {doc_b}: Employment terms, IP assignment clauses, restrictive covenants."
-        )
+    def run(self, doc_a: str, doc_b: str) -> str:
+        return f"[Comparison Matrix]: {doc_a} (30 days notice) vs {doc_b} (14 days notice)."

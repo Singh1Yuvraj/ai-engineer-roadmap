@@ -1,38 +1,55 @@
-"""
-agent/registry.py
-Central registry mapping tool names to execution instances.
-"""
-
-from typing import Dict, Any
-# pyrefly: ignore [missing-import]
-from agent.tools.search_tool import LegalSearchTool
-# pyrefly: ignore [missing-import]
-from agent.tools.summarize_tool import SummarizeTool
-# pyrefly: ignore [missing-import]
-from agent.tools.compare_tool import CompareTool
-# pyrefly: ignore [missing-import]
-from agent.tools.extract_clause_tool import ExtractClauseTool
+from typing import Any, Dict, List, Optional
 
 
 class ToolRegistry:
+
     def __init__(self):
         self._tools: Dict[str, Any] = {}
-        self._register_default_tools()
 
-    def _register_default_tools(self):
-        self.register(LegalSearchTool())
-        self.register(SummarizeTool())
-        self.register(CompareTool())
-        self.register(ExtractClauseTool())
-
-    def register(self, tool_instance: Any):
+    def register(self, tool_instance: Any) -> None:
+        """Register a tool instance."""
+        if not hasattr(tool_instance, "name") or not hasattr(
+            tool_instance, "parameters"
+        ):
+            raise ValueError(
+                "Registered tool must have 'name' and 'parameters' attributes."
+            )
         self._tools[tool_instance.name] = tool_instance
 
-    def get_tool(self, name: str) -> Any:
-        tool = self._tools.get(name)
-        if not tool:
-            raise ValueError(f"Tool '{name}' is not registered.")
-        return tool
+    def get_tool(self, name: str) -> Optional[Any]:
+        return self._tools.get(name)
 
-    def list_tools(self) -> Dict[str, str]:
-        return {name: tool.description for name, tool in self._tools.items()}
+    def get_schemas(self) -> List[Dict[str, Any]]:
+        """Returns tool definitions formatted as JSON Schemas for the LLM."""
+        schemas = []
+        for name, tool in self._tools.items():
+            schemas.append(
+                {
+                    "name": tool.name,
+                    "description": getattr(
+                        tool, "description", "No description provided."
+                    ),
+                    "parameters": tool.parameters,
+                }
+            )
+        return schemas
+
+    def validate_call(
+        self, tool_name: str, arguments: Dict[str, Any]
+    ) -> List[str]:
+        """Validates tool existence and required schema keys."""
+        errors = []
+        if tool_name not in self._tools:
+            return [f"Tool '{tool_name}' is not registered in ToolRegistry."]
+
+        tool = self._tools[tool_name]
+        schema = getattr(tool, "parameters", {})
+        required_keys = schema.get("required", [])
+
+        for req in required_keys:
+            if req not in arguments:
+                errors.append(
+                    f"Missing required argument '{req}' for tool '{tool_name}'."
+                )
+
+        return errors

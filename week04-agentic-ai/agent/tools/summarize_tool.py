@@ -1,19 +1,18 @@
-"""
-agent/tools/summarize_tool.py
-Summarizes retrieved text contexts.
-"""
-
-from typing import Any
-
-
 class SummarizeTool:
-    def __init__(self):
-        self.name = "summarize"
-        self.description = "Condenses and formats retrieved legal contexts."
+    name = "summarize"
+    description = "Summarize provided legal text or document content."
+    parameters = {
+        "type": "object",
+        "properties": {
+            "content": {
+                "type": "string",
+                "description": "The raw text or document content to summarize."
+            }
+        },
+        "required": ["content"]
+    }
 
-    def run(self, text_or_data: Any) -> str:
-        """Rule-based text summarization and cleanup."""
-        if isinstance(text_or_data, list):
-            combined = " ".join([item.get("document", "") for item in text_or_data])
-            return f"Summary: {combined[:150]}..."
-        return f"Summary: {str(text_or_data)[:150]}..."
+    def run(self, content: str) -> str:
+        # Avoid summarizing placeholders; summarize the actual content!
+        clean_content = content[:150] + "..." if len(content) > 150 else content
+        return f"[SUMMARY]: Concise summary of extracted text: '{clean_content}'"
