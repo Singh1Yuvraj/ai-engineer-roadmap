@@ -22,7 +22,7 @@ Software Developer at Lexlegis AI.
 - AI Infrastructure
 
 ## Final Capstone
-
+                
  AI Due Diligence Platform
 
 ## Duration
